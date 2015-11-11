@@ -1,36 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- Copyright (c) 2012 Rally Software Development Corp. All rights reserved -->
+<!-- Copyright (c) 2011  Rally Software Development Corp.  All rights reserved -->
 <html>
 <head>
-  <title>Recently Changed</title>
-  <meta name="Name" content="App: RecentlyChanged" />
-  <meta name="Version" content="2012.11.19" />
-  <meta name="Vendor" content="Rally Software" />
+    <title>Recently Changed</title>
+    <meta name="Name" content="App: Recently Changed"/>
+    <meta name="Version" content="2012.01.14"/>
+    <meta name="Vendor" content="Rally Software"/>
 
-  <script type="text/javascript" src="/apps/1.32/sdk.js"></script>
+    <script type="text/javascript">
 
-  <script type="text/javascript">
     function onLoad() {
-      var appCustom = new RecentlyChanged();
-      appCustom.display(dojo.body());
+        var recentlyChanged = new RecentlyChanged();
+        recentlyChanged.display(dojo.body());
     }
 
     rally.addOnLoad(onLoad);
-  </script>
+
+    </script>
 </head>
 
 <body>
-  <div id="lastWorkDay"></div>
-  <div class="tableLabel">Tasks</div>
-  <div id="totalLabel"></div>
-  <div id="tableDiv"></div>
-  <div id="stories">
-      <div class="tableLabel">Stories</div>
-      <div id="storyTable"></div>
+    <div id="lastWorkDay"></div>
+    <div id="updateTableDiv"></div>
+    <div class="tableLabel">Last Work Day Updated Tasks</div>
+    <div id="lastWorkdayTotalLabel"></div>
+    <div id="lastWorkdayTableDiv"></div>
+    <div id="lastWorkdayStories">
+      <div class="tableLabel">Last Work Day Updated Stories</div>
+      <div id="lastWorkdayStoryDiv"></div>
   </div>
-  <div id="defects">
-      <div class="tableLabel">Defects</div>
-      <div id="defectTable"></div>
+  <div id="lastWorkdayDefects">
+      <div class="tableLabel">Last Work Day Updated Defects</div>
+      <div id="lastWorkdayDefectDiv"></div>
+  </div>
+  <div class="tableLabel">Today Updated Tasks</div>
+  <div id="todayTotalLabel"></div>
+  <div id="todayTableDiv"></div>
+  <div id="todayStories">
+      <div class="tableLabel">Today Updated Stories</div>
+      <div id="todayStoryDiv"></div>
+  </div>
+  <div id="todayDefects">
+      <div class="tableLabel">Today Updated Defects</div>
+      <div id="todayDefectDiv"></div>
   </div>
 </body>
 </html>
